@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Number Guessing Game</title>
+  <link rel="icon" type="image/jpeg" href="./assets/arrow1.png" sizes="48x48">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+  <main class="container">
+    <span class="float-number n1">42</span>
+    <span class="float-number n2">17</span>
+    <span class="float-number n3">61</span>
+    <span class="float-number n4">88</span>
+    <span class="sparkle s1">+</span>
+    <span class="sparkle s2">+</span>
+    <span class="sparkle s3">+</span>
+
+    <header>
+
+      <div class="target-art" aria-hidden="true">
+        <img src="./assets/arrow1.png" alt="arrow">
+      </div>
+
+      <div class="heading">
+        <h1>Number Guessing <span>Game</span></h1>
+        <div class="tagline">
+          <span></span>
+          <p>Think smart, guess right!</p>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="avatar-scene" aria-hidden="true">
+        <img src="./assets/boy1.png" alt="boy">
+      </div>
+
+    </header>
+
+    <section class="info" aria-label="Game instructions">
+      <div class="card">
+        <i class="fa-solid fa-dice-five"></i>
+        <p>I'm thinking of a number<br />between <span>1 and 100.</span></p>
+      </div>
+
+      <div class="card">
+        <i class="fa-regular fa-clock"></i>
+        <p>You have <span>10</span> attempts<br />to guess it right.</p>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-trophy"></i>
+        <p>Can you guess<br />the number?</p>
+      </div>
+    </section>
+
+    <section class="game-box">
+      <h2>
+        <i class="fa-solid fa-star"></i>Make Your Guess<i class="fa-solid fa-star"></i>
+      </h2>
+
+      <div class="input-area">
+        <input type="number" id="guessField" placeholder="Enter a number between 1 and 100..." />
+
+        <button id="submit">
+          <span>Guess Now</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <p class="tip">
+        <i class="fa-regular fa-lightbulb"></i>
+        Tip: Try a number and I will tell you if it's
+        <span class="red">Too High</span>, <span class="blue">Too Low</span>,
+        or
+        <span class="green">Correct!</span>
+      </p>
+
+      <div class="message-row">
+        <div id="message">Let the guessing begin!</div>
+      </div>
+
+      <section class="stats" aria-label="Game stats">
+        <div class="stat-card previous">
+          <i class="fa-regular fa-rectangle-list"></i>
+          <div>
+            <h3>Previous Guesses</h3>
+            <p id="previousGuess">-</p>
+            <small>Your guesses will appear here</small>
+          </div>
+        </div>
+
+        <div class="stat-card remaining">
+          <i class="fa-solid fa-crosshairs"></i>
+          <div>
+            <h3>Guesses Remaining</h3>
+            <p id="remainingGuess">10</p>
+            <span class="attempt-dots" aria-hidden="true">
+              <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            </span>
+          </div>
+        </div>
+
+        <div class="stat-card score">
+          <i class="fa-solid fa-chart-simple"></i>
+          <div>
+            <h3>Score</h3>
+            <p id="score">-</p>
+            <small>Keep guessing to win!</small>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <div class="restart">
+      <button id="newGame">
+        <i class="fa-solid fa-rotate-right"></i>
+        New Game
+      </button>
+    </div>
+
+    <footer>
+      <i class="fa-solid fa-star"></i>
+      Have fun and enjoy the game!
+      <span>Good luck!</span>
+      <i class="fa-solid fa-star"></i>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
