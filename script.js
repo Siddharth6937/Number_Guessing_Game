@@ -53,7 +53,7 @@ function checkGuess() {
 
   // Correct Guess
   if (guess === randomNumber) {
-    score += 100;
+    score = getScoreForAttempt(previousGuesses.length);
     scoreBox.textContent = score;
 
     showMessage("🎉 Congratulations! You guessed it!", "#57ff8f");
@@ -88,6 +88,22 @@ function checkGuess() {
 
   guessField.value = "";
   guessField.focus();
+}
+
+function getScoreForAttempt(attempt) {
+  const scoreTable = {
+    1: 100,
+    2: 90,
+    3: 80,
+    4: 70,
+    5: 60,
+    6: 50,
+    7: 40,
+    8: 30,
+    9: 20,
+    10: 10,
+  };
+  return scoreTable[attempt] || 0;
 }
 
 function updateAttemptDots() {
