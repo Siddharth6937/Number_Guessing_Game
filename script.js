@@ -127,12 +127,14 @@ function resetGame() {
   previousGuesses = [];
 
   guessesRemaining = 10;
+  score = 0;
 
   gameOver = false;
 
   previousGuess.textContent = "-";
 
   remainingGuess.textContent = guessesRemaining;
+  scoreBox.textContent = "-";
 
   message.innerHTML = "🎯 New Game Started!";
 
